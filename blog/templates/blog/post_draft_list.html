@@ -1,0 +1,42 @@
+{% extends "blog/base.html" %}
+
+{% block titleblock %}
+    Your Drafts
+{% endblock %}
+
+{% block content %}
+    <div class="base">
+        <div class="container mt-5 post-list">
+            <div class="post">
+
+                {% if post_list %}
+                    {% for post in post_list %}
+
+                        <div class="text-center mt-3">
+                            <a href="{% url 'post_details' pk=post.pk %}"><p class="heading-font display-6">{{ post.title|title }}</p></a>
+                        </div>
+
+                        <div class="date" style="float: right;">
+                            <p class="postitem">Created on: {{ post.create_date|date:"D, d M, Y" }}</p>
+                        </div>                
+
+                        <div class="postitem">
+                            <p>Comments: {{post.approved_comments.count}}</p>
+                        </div>
+
+                        <hr>
+
+                    {% endfor %}  
+                    
+                {% else %}
+
+                    <div class="postitem text-center" style="font-size: 3em;">
+                        No drafts to show.
+                    </div>
+
+                {% endif %}
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}

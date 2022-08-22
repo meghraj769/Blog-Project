@@ -1,0 +1,39 @@
+{% extends "blog/base.html" %}
+
+{% block titleblock %}
+    Posts
+{% endblock %}
+
+{% block content %}
+<div class="base">
+    <div class="container mt-5">
+        <div>
+            <hr>
+            {% for post in post_list %}
+                <div>
+                    <div class="text-center mt-3">
+                        <a href="{% url 'post_details' pk=post.pk %}"><p class="heading-font display-6">{{ post.title|title }}</p></a>
+                    </div>
+    
+                    <div class="date" style="float: right;">
+                        <p class="postitem">Published on: {{ post.published_date|date:"D, d M, Y" }}</p>
+                    </div>
+                    
+                    <div class="postitem">
+                        <p>Comments: {{post.approved_comments.count}}</p>
+                    </div>
+                </div>
+                
+                <hr>
+                
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="star-field">
+<div class="layer"></div>
+<div class="layer"></div>
+<div class="layer"></div>
+
+{% endblock %}

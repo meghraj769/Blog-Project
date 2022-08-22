@@ -1,0 +1,83 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    padding-top: 50px;
+}
+
+.navbar-font{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 120%;    
+    border-bottom-style: solid;
+    border-bottom-color: #3c67e3;
+    border-bottom-width: 3px;
+}
+
+.mainbox{
+    padding-top: 5%;
+    color: white;
+}
+
+.para{
+    margin-top: 5%;
+}
+
+.blogs-btn, .nblog-btn, .draft-btn{
+    color: white;
+}
+
+.about-btn{
+    color: #5ddcff;
+}
+
+.blogs-btn:hover{
+    color : lightgreen;
+}
+
+.nblog-btn:hover{
+    color: aquamarine;
+}
+
+.draft-btn:hover{
+    color: yellow;
+}
+
+.about-btn:hover{
+    color : lightgreen;
+}
+
+/* mainbox style */
+
+body {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: skyblue;
+}
+
+.mydiv{
+    width:100%;
+    height:100%;
+    animation: myanimation 2s infinite;
+}
+
+@keyframes myanimation {
+    25%{color:yellow;}
+    /* 0% {color: red;} */
+    50%{color:lightgreen;}
+    75%{color:white;}
+    100% {color: pink;}
+}  

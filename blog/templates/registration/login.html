@@ -1,0 +1,49 @@
+{% extends 'blog/base.html' %}
+
+
+{% block titleblock %}
+    Home-Login
+{% endblock %}
+
+
+{%block content%}
+
+<div class="heading-div">
+    <h2 class="display-5">
+        Welcome to the blog site.
+    </h2>
+</div>
+
+<div class="login-page bg layer text-center text-light">
+    <div class="carden">
+
+
+        <h6 class="head-font fst-italic"><small>Please login to add posts, review comments and many more.</small></h6>
+
+        {% if form.errors %}
+            <p class="mydiv">Username and password didn't match.</p>
+        {% endif %}
+    
+        <div class="whitebg mt-5">
+            <form class="form-box" action="{% url 'login' %}" method="POST">
+                {%csrf_token%}
+                {{form.as_p}}
+        
+                <input type="submit" class="btn btn-1 btn-dark" value="Login">
+                <input type="hidden" name="next" value="{{next}}">
+        
+            </form>
+        </div>
+
+
+    </div>
+    <div class="star-field">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+</div>
+
+
+
+
+{%endblock%}

@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %}
+
+{% block titleblock %}
+    Create Post
+{% endblock %}
+
+{% block content %}
+
+    <div class="base text-center">
+        <div class="container mt-5 post-list p-5">
+            <h1 class="heading-font display-4">Post a New Blog</h1>
+            <div class="form-post mt-5 text-start postcontent">
+                <form class="post-form" method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <div class="text-center pt-5">
+                        <button type="submit" class="btn btn-primary btn-1" style="margin-top: 100px;">Save</button>
+                    </div>
+                </form>                
+            </div>
+    
+            <script src="js/medium-editor.js"></script>
+    
+            <script>
+                var editor = new MediumEditor(".editable"); 
+            </script>             
+        </div>
+    </div>
+    
+{% endblock %}
+
+
+

@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+
+{% block titleblock %}
+    Add a comment
+{% endblock %}
+
+{% block content %}
+
+    <div class="base text-center">
+        <div class="container mt-5 post-list p-5">
+            <h1 class="heading-font display-5">Add Comment</h1>
+            <div class="form-post mt-5 text-start postcontent">
+                <form class="post-form" method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <div class="text-center pt-5">
+                        <button type="submit" class="btn btn-primary">Post Comment</button>
+                    </div>
+                </form>
+            
+                <script>
+                    var editor = new MediumEditor(".editable");
+                </script>         
+        </div>
+    </div>
+
+{% endblock %}
