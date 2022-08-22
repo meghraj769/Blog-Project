@@ -13,7 +13,7 @@
                     {% for post in post_list %}
 
                         <div class="text-center mt-3">
-                            <a href="{% url 'post_details' pk=post.pk %}"><p class="heading-font display-6">{{ post.title|title }}</p></a>
+                            <a href="{% url 'post_details' pk=post.pk %}"><p class="heading-font hoverset display-6">{{ post.title|title }}</p></a>
                         </div>
 
                         <div class="date" style="float: right;">

@@ -104,7 +104,13 @@ a:hover{
   font-family: 'Aboreto', cursive;
   color: #8AF3FF;
   display: inline-block;
-}  
+}
+
+.hoverset:hover{
+  font-family: 'Aboreto', cursive;
+  color: yellow;
+  display: inline-block;
+}
 
 .head-font{
   font-family: 'Kanit', sans-serif;
