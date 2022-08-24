@@ -115,7 +115,7 @@ a:hover{
 .head-font{
   font-family: 'Kanit', sans-serif;
   display: inline-block;
-  color: #F4C095 ;
+  color: #3c67e3 ;
 }  
 
 .rbtfnt{
@@ -132,8 +132,8 @@ a:hover{
 }
 
 .whitebg{
-  border: 1px solid #F4C095;
-  color: #F4C095;
+  border: 1px solid #3c67e3;
+  color: #3c67e3;
   background-color: #30323D;
   border-radius: 25px;
   padding-top: 15px;
